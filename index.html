@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./javascript.js"defer></script>
+    <title>Protótipo do Método Mckinsey</title>
+</head>
+<body>
+
+    <nav>
+        <a href="./index.html">Aplicação do método</a>
+        <a href="./metodo.html">Sobre o Método Mckinsey</a>
+    </nav>
+
+<br>
+<br>
+    <div id="sessao-formulario">
+        <h2>1. Diagnóstico da Tarefa</h2>
+        
+        <label>Nome da Tarefa:</label>
+        <input type="text" id="nome" placeholder="Ex: Emitir Nota Fiscal">
+
+        <label>Repetição (1 = Raro / 5 = Todo dia)</label>
+        <input type="range" id="repeticao" min="1" max="5" step="0.5" value="3">
+
+        <label>Empatia Humana Necessária (1 = Lógica Pura / 5 = Muita Empatia)</label>
+        <input type="range" id="empatia" min="1" max="5" step="0.5" value="3">
+
+        <label>Risco se Errar (1 = Baixo / 5 = Crítico)</label>
+        <input type="range" id="risco" min="1" max="5" step="0.5" value="3">
+
+        <button id="botao-calcular" onclick="calcular()">Ver Resultado</button>
+    </div>
+
+    <div id="sessao-resultado">
+        <h2>2. Estratégia Sugerida: <span id="resultado-titulo" style="color: blue;">---</span></h2>
+        <p id="resultado-texto">Preencha acima para ver a análise.</p>
+
+        <div id="grafico-container">
+            <div id="linha-vertical"></div>
+            <div id="linha-horizontal"></div>
+            
+            <span id="texto-automacao">Automação</span>
+            <span id="texto-humano">Humano</span>
+
+            <div id="bolinha"></div>
+        </div>
+    </div>
+
+
+</body>
+</html>
